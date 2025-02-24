@@ -4,3 +4,14 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+anyhow = "1.0.96"
+chrono = "0.4.39"
+serde = { version = "1.0.216", features = ["derive"] }
+tokio = { version = "1.27", features = [
+    "time",
+    "sync",
+    "macros",
+    "test-util",
+    "rt-multi-thread",
+    "parking_lot",
+] }
