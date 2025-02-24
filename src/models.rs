@@ -1,7 +1,7 @@
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Deserialize)]
-struct KlineRecord {
+pub struct KlineRecord {
     #[serde(rename = "Open time")]
     open_time: u64,
     #[serde(rename = "Open")]
@@ -28,8 +28,8 @@ struct KlineRecord {
     ignore: u64,
 }
 
-#[derive(Debug)]
-struct KlineData {
+#[derive(Debug, Deserialize, Serialize)]
+pub struct KlineData {
     open_time: u64,
     open: f64,
     high: f64,
